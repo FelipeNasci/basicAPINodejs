@@ -1,45 +1,16 @@
 const express = require('express');
 const app = express();
 
+//Instanciando rotas
+const indexRoute = require('./Routes/index');
+const usersRoute = require('./Routes/users');
 
-//Metodo get, ao entrar na raiz do sistema
-app.get('/', (req, res) => {
-    let objeto = req.query;
-    return res.send(
-        {  message: 'Tudo ok com o metodo GET' }
-    )
-})
+//Quando usuario bater na rota raiz
+app.use('/', indexRoute);       //sera enviado o objeto indexRoute
+app.use('/users', usersRoute);  //sera enviado o objeto usersRoute
 
-//Metodo get, ao realizar uma requisicao POST na raiz do sistema
-app.post('/', (req, res) => {
-    return res.send(
-        { message: 'Tudo ok com o metodo post' }
-    )
-})
-
-//Usuario envia dados atraves do metodo GET
-app.get('/query', (req, res) => {
-
-    let obj = req.query;
-    return res.send({
-        message: 'Você enviou os parametros: nome: = ' + obj.nome + ' Idade: = ' + obj.idade 
-    })
-})
-
-//Usuario envia dados atraves do metodo POST
-//Usuario envia JSON
-//Necessita do BodyParser
-app.post('/query', (req, res)=>{
-
-    let obj = req.query;
-    return res.send({
-        message: 'Você enviou os parametros: nome: = ' + obj.nome + ' Idade: = ' + obj.idade 
-    })
-})
-
-port = 3000;        //porta de acesso
+port = 3000;                    //porta de acesso
 app.listen(port);
 
 console.log('Servidor ativo na porta ' + port);
-
 module.exports = app;

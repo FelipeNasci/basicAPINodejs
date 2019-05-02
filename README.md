@@ -5,3 +5,5 @@ Criação de uma API básica com NodeJs
 Ministrado por: [Diego Penteado](https://github.com/dcpenteado)
 
 1 - Aula 1 - INICIANDO O PROJETO E CRIANDO ENDPOINTS
+
+2 - Aula 2 - TRABALHANDO COM ROTAS
