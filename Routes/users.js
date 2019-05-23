@@ -34,11 +34,11 @@ router.post('/create', (req, res) =>{
 
   Users.create(req.body, (err, data)=>{
     if(err) return res.send({ error: 'erro ao criar usuario' });
+
+    data.password = undefined;  //Evitar que a senha de user seja exibida
     return res.send(data);
     });
   });
-
-  //return res.send({message: 'usuario criado com sucesso!'})
 });
 
 

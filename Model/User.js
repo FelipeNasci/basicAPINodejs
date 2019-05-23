@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;   //obj que sera usado para esquematizar o user
+const bcrypt = require('bcrypt');
 
 //Esquema do banco de dados -> Usuario
 const UserSchema = new Schema({
@@ -11,6 +12,21 @@ const UserSchema = new Schema({
   password: { type: String, required: true, selected: false  },
   //tabela created armazena o momento da criacao de usuario
   created: { type: Date, default: Date.now }
+
+});
+
+UserSchema.pre('save', function(next) {
+  let user = this;
+
+  if(!user.isModified('password')){
+console.log('caraio tio');
+console.log('ggg');
+    return next();}
+
+  bcrypt.hash (user.password, 10, (err, encrypted) =>{
+    user.password = encrypted;
+    return next();
+  });
 
 });
 
