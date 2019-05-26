@@ -15,14 +15,14 @@ const UserSchema = new Schema({
 
 });
 
+// funcao chamada antes de chamar usuario
 UserSchema.pre('save', function(next) {
   let user = this;
 
-  if(!user.isModified('password')){
-console.log('caraio tio');
-console.log('ggg');
-    return next();}
+  //Se a variavel user nao for modificada, não faça nada
+  if(!user.isModified('password')) return next();
 
+  //criptografando o password
   bcrypt.hash (user.password, 10, (err, encrypted) =>{
     user.password = encrypted;
     return next();

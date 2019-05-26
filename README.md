@@ -8,9 +8,9 @@ Ministrado por: [Diego Penteado](https://github.com/dcpenteado)
 
 	- Dependências instaladas: express
 
-	´´´
+```
 	npm install express --save
-	´´´
+```
 
 2 - Aula 2 - TRABALHANDO COM ROTAS
 
@@ -18,22 +18,22 @@ Ministrado por: [Diego Penteado](https://github.com/dcpenteado)
 
 	- Dependências instaladas: mongoose
 
-	´´´
+```
 	npm install mongoose --save
-	´´´
+```
 
 4 - Aula 4 - CRIANDO SCHEMAS DO MONGOOSE
 
 	- Dependências instaladas: body-parser
 
-	´´´
+```
 	npm install body-parser --save
-	´´´
+```
 
 5 - Aula 5 - CRIPTOGRAFIA DE CAMPOS DE SENHA COM BCRYPT
 
 	- Dependências instaladas: bcrypt
 
-	´´´
+```
 	npm install bcrypt --save
-	´´´
+```
