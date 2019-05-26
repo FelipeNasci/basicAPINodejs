@@ -4,8 +4,8 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-const password = '**';
-const url =  '**';
+const password = 'Minhasenha';
+const url =  'mongodb+srv://userAdm:'+ password +'@clusterapi-vxcdt.mongodb.net/test?retryWrites=true';
 const options = { reconnectTries: Number.MAX_VALUE, reconnectInterval: 500, poolSize: 5, useNewUrlParser: true  };
 
 
