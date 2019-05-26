@@ -37,3 +37,5 @@ Ministrado por: [Diego Penteado](https://github.com/dcpenteado)
 ```
 	npm install bcrypt --save
 ```
+
+6 - Aula 6 - ASYNC AWAIT E O FIM DO CALLBACK HELL

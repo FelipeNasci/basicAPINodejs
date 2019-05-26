@@ -16,17 +16,15 @@ const UserSchema = new Schema({
 });
 
 // funcao chamada antes de chamar usuario
-UserSchema.pre('save', function(next) {
+UserSchema.pre('save', async function(next) {
   let user = this;
 
   //Se a variavel user nao for modificada, não faça nada
   if(!user.isModified('password')) return next();
 
-  //criptografando o password
-  bcrypt.hash (user.password, 10, (err, encrypted) =>{
-    user.password = encrypted;
-    return next();
-  });
+  //retorna o password encriptado para 'user.password'
+  user.password = await bcrypt.hash(user.password, 10);
+  return next();
 
 });
 
