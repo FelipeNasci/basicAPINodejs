@@ -4,14 +4,14 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 
 const Users = require('../Model/User.js');
+const config = require('../config/config');
 
 //FUNÇÕES AUXILIARES
 const createUserToken = (userId) => {
-  const key = 'token'
 
   //para gerar o token, são utilizados:
   //id do usuario, uma chave, tempo de validade
-  return jwt.sign({id: userId}, key, {expiresIn: '7d'} );
+  return jwt.sign({id: userId}, config.token, {expiresIn: config.token_expires} );
 }
 
 router.get('/', async (req, res) => {

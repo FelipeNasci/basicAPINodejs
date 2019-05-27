@@ -2,12 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+const config = require('./config/config');
+
 const app = express();
 
-const password = '**';
-const url =  '**'
+const url = config.url;
 const options = { reconnectTries: Number.MAX_VALUE, reconnectInterval: 500, poolSize: 5, useNewUrlParser: true  };
-
 
 mongoose.connect(url, options);           //conecta com o banco
 mongoose.set('useCreateIndex', true);     //usado para evitar codigo de alerta

@@ -50,6 +50,6 @@ Ministrado por: [Diego Penteado](https://github.com/dcpenteado)
 
 8 - Aula 8 - RETORNANDO STATUS CODES APROPRIADOS
 
-```
-	[statusCode](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status)
-```
+- [statusCode](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status)
+
+9 - Aula 9 - CONFIGURAÇÃO FINAL DO PROJETO
