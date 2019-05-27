@@ -47,3 +47,9 @@ Ministrado por: [Diego Penteado](https://github.com/dcpenteado)
 ```
 	npm install jsonwebtoken --save
 ```
+
+8 - Aula 8 - RETORNANDO STATUS CODES APROPRIADOS
+
+```
+	[statusCode](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status)
+```

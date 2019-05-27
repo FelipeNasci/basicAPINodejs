@@ -5,7 +5,7 @@ const auth = (req, res, next) => {
   const token_header = req.headers.token;
 
   //Se a requisicao nao contiver nenhum token, nao faça login
-  if(!token_header) return res.send( {error: 'Autenticação recusada'} );
+  if(!token_header) return res.status(401).send( {error: 'Autenticação recusada'} );
 
   const key = 'token'
 
@@ -13,7 +13,7 @@ const auth = (req, res, next) => {
   jwt.verify (token_header, key, (err, decoded) => {
 
     //Caso o token esteja incorreto
-    if(err) return res.send( {error: 'Token inválido'} );
+    if(err) return res.status(401).end( {error: 'Token inválido'} );
 
     res.locals.auth_data = decoded;     //salva o id dos usuarios logados
     return next();
