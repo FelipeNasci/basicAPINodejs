@@ -1,7 +1,7 @@
 # basicAPINodejs
 
 [Get starter for API create](https://www.udemy.com/curso-basico-de-apis-com-nodejs-express-mongodb/learn/v4/content)
-Ministrado por: [Diego Penteado](https://github.com/dcpenteado)
+Taught by: [Diego Penteado](https://github.com/dcpenteado)
 
 
 ### Features
@@ -10,6 +10,8 @@ Ministrado por: [Diego Penteado](https://github.com/dcpenteado)
 - Store data in database NoSQL
 - Data criptography
 - Users Authentication
+
+### [Sumary](https://github.com/FelipeNasci/basicAPINodejs/blob/master/SUMARY.md)
 
 
 ### Certificate
